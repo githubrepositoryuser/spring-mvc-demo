@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="propertyConfigure" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	<property name="location" value="classpath:appconfig.services.properties"/>
+	<property name="placeholderPrefix">
+		<value>$SRVC_CONF{</value>	
+	</property>
+	<property name="ignoreUnresolvablePlaceholders">
+		<value>false</value>
+	</property>
+	</bean>
+	
+</beans>

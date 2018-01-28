@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="jdbcDataSource" class="com.demo.repository.JdbcDataSource" scope="prototype">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+		<property name="url" value="$SRVC_CONF{keymgmt.db.url}"/>
+		<property name="username" value="$SRVC_CONF{keymgmt.db.username}"/>
+		<property name="password" value="$SRVC_CONF{keymgmt.db.password}"/>
+		<property name="maxActive" value="24"/>
+		<property name="maxIdle" value="20"/>
+		<property name="validationQuery" value="SELECT 1 FROM DUAL"/>
+	</bean>
+</beans>
