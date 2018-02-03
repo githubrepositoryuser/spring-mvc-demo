@@ -10,6 +10,9 @@
 	   	<param-value>
 	   		classpath:jdbc/jdbcContext.xml
 	   		classpath:dax/WebServicesContext.xml
+	   		classpath:global/GlobalCamelContext.xml
+	   		classpath:request/RequestContext.xml
+	   		classpath:engine/ExecutorContext.xml
 	   	</param-value>
    </context-param>
    
